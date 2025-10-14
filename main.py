@@ -127,6 +127,9 @@ b={"/":"ОГЛАВЛЕНИЕ","/1":"Глава 1:ТЕПЛОВЫЕ ЯВЛЕНИЯ
 
 
 def main(pagew: ft.Page):
+    pagew.scroll=ft.ScrollMode.ALWAYS
+    pagew.theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN_900)
+    pagew.theme_mode = (ft.ThemeMode.LIGHT)
     def goto_pagew2(n):
         pagew.go(button2.data)
     def goto_pagew3(n):
@@ -253,73 +256,72 @@ def main(pagew: ft.Page):
         pagew.go(pagew.route+"/test")
         pagew.update()
     def goto_test_end(n):
-        if txtf.value.lower().split(",").sort() == anw[pagew.route].lower().split(",").sort() and txtf.value != "":
-            
+        if txtf.value.lower().split(",").sort() == anw[pagew.route].sort() and txtf.value != "":
             print(txtf.value)
             print(anw[pagew.route].lower().replace(",","").split(" "))
             pagew.go("/")
-    button2 = ft.TextButton(b["/1/2"],on_click=goto_pagew2,data="/1/2")
-    button3 = ft.TextButton(b["/1/3"],on_click=goto_pagew3,data="/1/3")
-    button4 = ft.TextButton(b["/1/4"],on_click=goto_pagew4,data="/1/4")
-    button5 = ft.TextButton(b["/1/5"],on_click=goto_pagew5,data="/1/5")
-    button6 = ft.TextButton(b["/1/6"],on_click=goto_pagew6,data="/1/6")
-    button7 = ft.TextButton(b["/1/7"],on_click=goto_pagew7,data="/1/7")
-    button8 = ft.TextButton(b["/1/8"],on_click=goto_pagew8,data="/1/8")
-    button9 = ft.TextButton(b["/1/9"],on_click=goto_pagew9,data="/1/9")
-    button10 = ft.TextButton(b["/1/10"],on_click=goto_pagew10,data="/1/10")
-    button11 = ft.TextButton(b["/1/11"],on_click=goto_pagew11,data="/1/11")
-    button12 = ft.TextButton(b["/1/12"],on_click=goto_pagew12,data="/1/12")
-    button13 = ft.TextButton(b["/1/13"],on_click=goto_pagew13,data="/1/13")
-    button14 = ft.TextButton(b["/1/14"],on_click=goto_pagew14,data="/1/14")
-    button15 = ft.TextButton(b["/1/15"],on_click=goto_pagew15,data="/1/15")
-    button16 = ft.TextButton(b["/1/16"],on_click=goto_pagew16,data="/1/16")
-    button17 = ft.TextButton(b["/1/17"],on_click=goto_pagew17,data="/1/17")
-    button18 = ft.TextButton(b["/1/18"],on_click=goto_pagew18,data="/1/18")
-    button19 = ft.TextButton(b["/1/19"],on_click=goto_pagew19,data="/1/19")
-    button20 = ft.TextButton(b["/1/20"],on_click=goto_pagew20,data="/1/20")
-    button21 = ft.TextButton(b["/1/21"],on_click=goto_pagew21,data="/1/21")
-    button22 = ft.TextButton(b["/1/22"],on_click=goto_pagew22,data="/1/22")
-    button23 = ft.TextButton(b["/1/23"],on_click=goto_pagew23,data="/1/23")
-    button24 = ft.TextButton(b["/1/24"],on_click=goto_pagew24,data="/1/24")
-    button25 = ft.TextButton(b["/1/25"],on_click=goto_pagew25,data="/1/25")
-    button26 = ft.TextButton(b["/1/26"],on_click=goto_pagew26,data="/1/26")
-    button27 = ft.TextButton(b["/2/27"],on_click=goto_pagew27,data="/2/27")
-    button28 = ft.TextButton(b["/2/28"],on_click=goto_pagew28,data="/2/28")
-    button29 = ft.TextButton(b["/2/29"],on_click=goto_pagew29,data="/2/29")
-    button30 = ft.TextButton(b["/2/30"],on_click=goto_pagew30,data="/2/30")
-    button31 = ft.TextButton(b["/2/31"],on_click=goto_pagew31,data="/2/31")
-    button32 = ft.TextButton(b["/2/32"],on_click=goto_pagew32,data="/2/32")
-    button33 = ft.TextButton(b["/2/33"],on_click=goto_pagew33,data="/2/33")
-    button34 = ft.TextButton(b["/2/34"],on_click=goto_pagew34,data="/2/34")
-    button35 = ft.TextButton(b["/2/35"],on_click=goto_pagew35,data="/2/35")
-    button36 = ft.TextButton(b["/2/36"],on_click=goto_pagew36,data="/2/36")
-    button37 = ft.TextButton(b["/2/37"],on_click=goto_pagew37,data="/2/37")
-    button38 = ft.TextButton(b["/2/38"],on_click=goto_pagew38,data="/2/38")
-    button39 = ft.TextButton(b["/2/39"],on_click=goto_pagew39,data="/2/39")
-    button40 = ft.TextButton(b["/2/40"],on_click=goto_pagew40,data="/2/40")
-    button41 = ft.TextButton(b["/2/41"],on_click=goto_pagew41,data="/2/41")
-    button42 = ft.TextButton(b["/2/42"],on_click=goto_pagew42,data="/2/42")
-    button43 = ft.TextButton(b["/2/43"],on_click=goto_pagew43,data="/2/43")
-    button44 = ft.TextButton(b["/2/44"],on_click=goto_pagew44,data="/2/44")
-    button45 = ft.TextButton(b["/2/45"],on_click=goto_pagew45,data="/2/45")
-    button46 = ft.TextButton(b["/2/46"],on_click=goto_pagew46,data="/2/46")
-    button47 = ft.TextButton(b["/2/47"],on_click=goto_pagew47,data="/2/47")
-    button48 = ft.TextButton(b["/2/48"],on_click=goto_pagew48,data="/2/48")
-    button49 = ft.TextButton(b["/2/49"],on_click=goto_pagew49,data="/2/49")
-    button50 = ft.TextButton(b["/3/50"],on_click=goto_pagew50,data="/3/50")
-    button51 = ft.TextButton(b["/3/51"],on_click=goto_pagew51,data="/3/51")
-    button52 = ft.TextButton(b["/3/52"],on_click=goto_pagew52,data="/3/52")
-    button53 = ft.TextButton(b["/3/53"],on_click=goto_pagew53,data="/3/53")
-    button54 = ft.TextButton(b["/3/54"],on_click=goto_pagew54,data="/3/54")
-    button55 = ft.TextButton(b["/3/55"],on_click=goto_pagew55,data="/3/55")
-    button56 = ft.TextButton(b["/3/56"],on_click=goto_pagew56,data="/3/56")
-    button57 = ft.TextButton(b["/3/57"],on_click=goto_pagew57,data="/3/57")
-    button58 = ft.TextButton(b["/3/58"],on_click=goto_pagew58,data="/3/58")
-    button59 = ft.TextButton(b["/3/59"],on_click=goto_pagew59,data="/3/59")
-    button60 = ft.TextButton(b["/3/60"],on_click=goto_pagew60,data="/3/60")
-    button61 = ft.TextButton(b["/3/61"],on_click=goto_pagew61,data="/3/61")
-    button62 = ft.TextButton(b["/3/62"],on_click=goto_pagew62,data="/3/62")
-    txtf = ft.TextField(label="Ответ",border=ft.InputBorder.UNDERLINE,border_color=ft.Colors.BLUE_200,hint_text="Пишите только запятые без пробелов")
+    button2 = ft.TextButton(content=ft.Text(value=b["/1/2"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew2,data="/1/2")
+    button3 = ft.TextButton(content=ft.Text(value=b["/1/3"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew3,data="/1/3")
+    button4 = ft.TextButton(content=ft.Text(value=b["/1/4"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew4,data="/1/4")
+    button5 = ft.TextButton(content=ft.Text(value=b["/1/5"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew5,data="/1/5")
+    button6 = ft.TextButton(content=ft.Text(value=b["/1/6"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew6,data="/1/6")
+    button7 = ft.TextButton(content=ft.Text(value=b["/1/7"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew7,data="/1/7")
+    button8 = ft.TextButton(content=ft.Text(value=b["/1/8"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew8,data="/1/8")
+    button9 = ft.TextButton(content=ft.Text(value=b["/1/9"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew9,data="/1/9")
+    button10 = ft.TextButton(content=ft.Text(value=b["/1/10"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew10,data="/1/10")
+    button11 = ft.TextButton(content=ft.Text(value=b["/1/11"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew11,data="/1/11")
+    button12 = ft.TextButton(content=ft.Text(value=b["/1/12"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew12,data="/1/12")
+    button13 = ft.TextButton(content=ft.Text(value=b["/1/13"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew13,data="/1/13")
+    button14 = ft.TextButton(content=ft.Text(value=b["/1/14"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew14,data="/1/14")
+    button15 = ft.TextButton(content=ft.Text(value=b["/1/15"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew15,data="/1/15")
+    button16 = ft.TextButton(content=ft.Text(value=b["/1/16"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew16,data="/1/16")
+    button17 = ft.TextButton(content=ft.Text(value=b["/1/17"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew17,data="/1/17")
+    button18 = ft.TextButton(content=ft.Text(value=b["/1/18"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew18,data="/1/18")
+    button19 = ft.TextButton(content=ft.Text(value=b["/1/19"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew19,data="/1/19")
+    button20 = ft.TextButton(content=ft.Text(value=b["/1/20"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew20,data="/1/20")
+    button21 = ft.TextButton(content=ft.Text(value=b["/1/21"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew21,data="/1/21")
+    button22 = ft.TextButton(content=ft.Text(value=b["/1/22"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew22,data="/1/22")
+    button23 = ft.TextButton(content=ft.Text(value=b["/1/23"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew23,data="/1/23")
+    button24 = ft.TextButton(content=ft.Text(value=b["/1/24"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew24,data="/1/24")
+    button25 = ft.TextButton(content=ft.Text(value=b["/1/25"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew25,data="/1/25")
+    button26 = ft.TextButton(content=ft.Text(value=b["/1/26"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew26,data="/1/26")
+    button27 = ft.TextButton(content=ft.Text(value=b["/2/27"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew27,data="/2/27")
+    button28 = ft.TextButton(content=ft.Text(value=b["/2/28"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew28,data="/2/28")
+    button29 = ft.TextButton(content=ft.Text(value=b["/2/29"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew29,data="/2/29")
+    button30 = ft.TextButton(content=ft.Text(value=b["/2/30"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew30,data="/2/30")
+    button31 = ft.TextButton(content=ft.Text(value=b["/2/31"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew31,data="/2/31")
+    button32 = ft.TextButton(content=ft.Text(value=b["/2/32"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew32,data="/2/32")
+    button33 = ft.TextButton(content=ft.Text(value=b["/2/33"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew33,data="/2/33")
+    button34 = ft.TextButton(content=ft.Text(value=b["/2/34"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew34,data="/2/34")
+    button35 = ft.TextButton(content=ft.Text(value=b["/2/35"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew35,data="/2/35")
+    button36 = ft.TextButton(content=ft.Text(value=b["/2/36"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew36,data="/2/36")
+    button37 = ft.TextButton(content=ft.Text(value=b["/2/37"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew37,data="/2/37")
+    button38 = ft.TextButton(content=ft.Text(value=b["/2/38"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew38,data="/2/38")
+    button39 = ft.TextButton(content=ft.Text(value=b["/2/39"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew39,data="/2/39")
+    button40 = ft.TextButton(content=ft.Text(value=b["/2/40"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew40,data="/2/40")
+    button41 = ft.TextButton(content=ft.Text(value=b["/2/41"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew41,data="/2/41")
+    button42 = ft.TextButton(content=ft.Text(value=b["/2/42"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew42,data="/2/42")
+    button43 = ft.TextButton(content=ft.Text(value=b["/2/43"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew43,data="/2/43")
+    button44 = ft.TextButton(content=ft.Text(value=b["/2/44"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew44,data="/2/44")
+    button45 = ft.TextButton(content=ft.Text(value=b["/2/45"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew45,data="/2/45")
+    button46 = ft.TextButton(content=ft.Text(value=b["/2/46"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew46,data="/2/46")
+    button47 = ft.TextButton(content=ft.Text(value=b["/2/47"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew47,data="/2/47")
+    button48 = ft.TextButton(content=ft.Text(value=b["/2/48"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew48,data="/2/48")
+    button49 = ft.TextButton(content=ft.Text(value=b["/2/49"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew49,data="/2/49")
+    button50 = ft.TextButton(content=ft.Text(value=b["/3/50"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew50,data="/3/50")
+    button51 = ft.TextButton(content=ft.Text(value=b["/3/51"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew51,data="/3/51")
+    button52 = ft.TextButton(content=ft.Text(value=b["/3/52"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew52,data="/3/52")
+    button53 = ft.TextButton(content=ft.Text(value=b["/3/53"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew53,data="/3/53")
+    button54 = ft.TextButton(content=ft.Text(value=b["/3/54"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew54,data="/3/54")
+    button55 = ft.TextButton(content=ft.Text(value=b["/3/55"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew55,data="/3/55")
+    button56 = ft.TextButton(content=ft.Text(value=b["/3/56"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew56,data="/3/56")
+    button57 = ft.TextButton(content=ft.Text(value=b["/3/57"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew57,data="/3/57")
+    button58 = ft.TextButton(content=ft.Text(value=b["/3/58"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew58,data="/3/58")
+    button59 = ft.TextButton(content=ft.Text(value=b["/3/59"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew59,data="/3/59")
+    button60 = ft.TextButton(content=ft.Text(value=b["/3/60"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew60,data="/3/60")
+    button61 = ft.TextButton(content=ft.Text(value=b["/3/61"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew61,data="/3/61")
+    button62 = ft.TextButton(content=ft.Text(value=b["/3/62"],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,color=ft.Colors.PRIMARY),on_click=goto_pagew62,data="/3/62")
+    txtf = ft.TextField(label="Ответ",border=ft.InputBorder.UNDERLINE,border_color=ft.Colors.PRIMARY,hint_text="Пишите только запятые без пробелов")
     buttons1 = [button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12,button13,button14,button15,button16,button17,button18,button19,button20,button21,button22,button23,button24,button25,button26]
     buttons2 = [button27,button28,button29,button30,button31,button32,button33,button34,button35,button36,button37,button38,button39,button40,button41,button42,button43,button44,button45,button46,button47,button48,button49]
     buttons3 = [button50,button51,button52,button53,button54,button55,button56,button57,button58,button59,button60,button61]
@@ -335,11 +337,11 @@ def main(pagew: ft.Page):
                 "/",
                 [
 
-                ft.AppBar(title=ft.Text(b["/"], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),
+                ft.AppBar(title=ft.Text(b["/"], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),
                 ft.Row([
-                    ft.Column([ft.ElevatedButton("Глава 1:ТЕПЛОВЫЕ ЯВЛЕНИЯ",on_click=open_1)]+buttons1),
-                    ft.Column([ft.ElevatedButton("Глава 2:ЭЛЕКТРИЧЕСКИЕ ЯВЛЕНИЯ",on_click=open_2)]+buttons2),
-                    ft.Column([ft.ElevatedButton("Глава 3:ЭЛЕКТРОМАГНИТНЫЕ ЯВЛЕНИЯ",on_click=open_3)]+buttons3)
+                    ft.Column([ft.ElevatedButton(content=ft.Text(value="Глава 1:ТЕПЛОВЫЕ ЯВЛЕНИЯ",theme_style=ft.TextThemeStyle.TITLE_LARGE,color=ft.Colors.PRIMARY),on_click=open_1)]+buttons1),
+                    ft.Column([ft.ElevatedButton(content=ft.Text(value="Глава 2:ЭЛЕКТРИЧЕСКИЕ ЯВЛЕНИЯ",theme_style=ft.TextThemeStyle.TITLE_LARGE,color=ft.Colors.PRIMARY),on_click=open_2)]+buttons2),
+                    ft.Column([ft.ElevatedButton(content=ft.Text(value="Глава 3:ЭЛЕКТРОМАГНИТНЫЕ ЯВЛЕНИЯ",theme_style=ft.TextThemeStyle.TITLE_LARGE,color=ft.Colors.PRIMARY),on_click=open_3)]+buttons3)
                 ]),
                 ],
                 )
@@ -348,7 +350,7 @@ def main(pagew: ft.Page):
             pagew.views.append(
                 ft.View(
                     "/1",
-                    [   ft.AppBar(title=ft.Text(b["/1"], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),
+                    [   ft.AppBar(title=ft.Text(b["/1"], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),
                         ft.Column(buttons1)
                     ],
                 )
@@ -357,7 +359,7 @@ def main(pagew: ft.Page):
             pagew.views.append(
                 ft.View(
                     "/2",
-                    [   ft.AppBar(title=ft.Text(b["/2"], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),
+                    [   ft.AppBar(title=ft.Text(b["/2"], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),
                         ft.Column(buttons2)
                     ],
                 )
@@ -366,7 +368,7 @@ def main(pagew: ft.Page):
             pagew.views.append(
                 ft.View(
                     "/3",
-                    [   ft.AppBar(title=ft.Text(b["/3"], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),
+                    [   ft.AppBar(title=ft.Text(b["/3"], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),
                         ft.Column(buttons3)
                     ],
                 )
@@ -375,42 +377,42 @@ def main(pagew: ft.Page):
             if pagew.route == "/1/"+str(i):
                 pagew.views.append(
                     ft.View(
-                    "/1/"+str(i),[ft.AppBar(title=ft.Text(b["/1/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),ft.Text(value=txt["/1/"+str(i-i+2)],theme_style=ft.TextThemeStyle.TITLE_MEDIUM,weight=300),ft.TextButton("Приступить к тестированию",on_click=goto_test)]
+                    "/1/"+str(i),[ft.AppBar(title=ft.Text(b["/1/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),ft.Text(value=txt["/1/"+str(i-i+2)],theme_style=ft.TextThemeStyle.TITLE_LARGE,weight=300),ft.TextButton("Приступить к тестированию",on_click=goto_test)]
                     )
                 )
         for i in range(27,50):
             if pagew.route == "/2/"+str(i):
                 pagew.views.append(
                     ft.View(
-                    "/2/"+str(i),[ft.AppBar(title=ft.Text(b["/2/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),]
+                    "/2/"+str(i),[ft.AppBar(title=ft.Text(b["/2/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),]
                     )
                 )
         for i in range(50,63):
             if pagew.route == "/3/"+str(i):
                 pagew.views.append(
                     ft.View(
-                    "/3/"+str(i),[ft.AppBar(title=ft.Text(b["/3/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),]
+                    "/3/"+str(i),[ft.AppBar(title=ft.Text(b["/3/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),]
                     )
                 )
         for i in range(2,27):
             if pagew.route == "/1/"+str(i)+"/test":
                 pagew.views.append(
                     ft.View(
-                    "/1/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/1/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),ft.Text(value=tests["/1/"+str(i-i+2)][0],theme_style=ft.TextThemeStyle.HEADLINE_SMALL),txtf,ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
+                    "/1/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/1/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),ft.Text(value=tests["/1/"+str(i-i+2)][0],theme_style=ft.TextThemeStyle.HEADLINE_SMALL),txtf,ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
                     )
                 )
         for i in range(27,50):
             if pagew.route == "/2/"+str(i)+"/test":
                 pagew.views.append(
                     ft.View(
-                    "/2/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/2/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
+                    "/2/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/2/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
                     )
                 )
         for i in range(50,63):
             if pagew.route == "/3/"+str(i)+"/test":
                 pagew.views.append(
                     ft.View(
-                    "/3/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/3/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_MEDIUM),center_title=True),ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
+                    "/3/"+str(i)+"/test",[ft.AppBar(title=ft.Text("Тестирование по теме "+b["/3/"+str(i)], theme_style=ft.TextThemeStyle.DISPLAY_LARGE),center_title=True),ft.TextButton("Закончить тестирование",on_click=goto_test_end)]
                     )
                 )
         pagew.update()
